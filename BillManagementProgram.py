@@ -1,3 +1,6 @@
+#I've always wanted to keep control of all of the bills I have to pay every month, but was too lazy to put the on a file, so I created this code. 
+#If I have already paid them I just green them out on excel, but I will add a "paid" section further. 
+
 import pandas as pd
 import seaborn as sns
 
@@ -16,8 +19,8 @@ for name in bill_names: #The loop will read the name of the bills first, then wi
         due_dates[month] = f"{due_date}"
     bills[name] = {"Value":float(value), "Due Dates":due_dates}
 
-df = pd.DataFrame.from_dict(bills) 
-df = df.T
+df = pd.DataFrame.from_dict(bills) #Convert it to a dataframe
+df = df.T #Transposes the dataframe so the bills' names are shown vertically
 
 
 df_due_dates = df['Due Dates'].apply(pd.Series)
