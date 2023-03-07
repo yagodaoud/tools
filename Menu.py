@@ -15,7 +15,7 @@ for section in sections:
         else:
             section.append("🍚" + dish if section is rice else "🥘" + dish if section is beans else "🥩" + dish if section is meats else "😋" + dish if section is sides else "🥬" + dish)
 
-# print the menu in the same format as the WhatsApp message
+# print the menu 
 print("Bom dia!\nSegue o cardápio para marmitex e marmita:")
 
 print("\n".join(rice))
