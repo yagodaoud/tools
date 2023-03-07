@@ -13,7 +13,7 @@ for section in sections:
         if dish == "next": 
             break
         else:
-            section.append("🍚" + dish if section is rice else "🥘" + dish if section is beans else "🥩" + dish if section is meats else "😋" + dish if section is sides else "🥬" + dish)
+            section.append("🍚" + dish if section is rice else "🥘" + dish if section is beans else "🥩" + dish if section is meats else "😋" + dish if section is sides else "🥗" + dish)
 
 # print the menu 
 print("Bom dia!\nSegue o cardápio para marmitex e marmita:")
@@ -24,4 +24,4 @@ print("\n".join(meats))
 print("\n".join(sides))
 print("\n".join(salads))
 
-print("📃Cardápio sujeito a alteração ao longo do expediente.\n📝 Para realizar seu pedido, mande a mensagem no privado da conta do Restaurante Cozinha & Cia.\n👨‍🍳Nosso tempero é nosso toque!\n🍝Self service | Marmitex | Marmita \n📍Seg. à Sex. - 10h45 às 14h - Sáb. - 10h45 às 14h30\n📞3403-7869\n📞98141-4737 \n❤Amamos a Cozinha & a Sua CIA")
+print("\n\n📃Cardápio sujeito a alteração ao longo do expediente.\n📝 Para realizar seu pedido, mande a mensagem no privado da conta do Restaurante Cozinha & Cia.\n👨‍🍳Nosso tempero é nosso toque!\n🍝Self service | Marmitex | Marmita \n📍Seg. à Sex. - 10h45 às 14h - Sáb. - 10h45 às 14h30\n📞3403-7869\n📞98141-4737 \n❤Amamos a Cozinha & a Sua CIA")
