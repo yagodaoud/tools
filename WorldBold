@@ -1,0 +1,40 @@
+import os
+from fpdf import FPDF
+
+dir = r'C:\Users\yagod\Desktop\Coding\.venv\Python\Tools'
+
+os.chdir(dir)
+
+output = []
+pdf = FPDF()
+pdf.add_page()
+pdf.set_font('Arial', 'B', 16)
+
+
+class bold:
+   BOLD = 'BT /F1 12 Tf <01>'
+   END = '</01> ET'
+
+
+with open('bold.txt', 'r') as f:
+        for line in f:
+            word = line.split()
+            for i in word:
+                toBold = round(len(i)/2)
+                if toBold == 0:
+                     toBold += 1
+                elif toBold == 2 and len(i) < 3:
+                    toBold -= 1
+                firstHalf = i[:toBold]
+                secondHalf = i[toBold:]
+                boldWord = bold.BOLD + str(firstHalf) + bold.END + str(secondHalf)
+                print(boldWord)
+                output.append(boldWord)
+
+for word in output:
+     pdf.cell(40, 10, word)
+pdf.output('output.pdf', 'F')
+
+
+
+
